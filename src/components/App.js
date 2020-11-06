@@ -71,22 +71,27 @@ const  App = ()=> {
   };
     return (
       <div id="main">
+            <h1>To Do App</h1>
             <TodoInput
               item={item}
               handleChange={handleChange}
               addTodoItem={addTodoItem}
             />
-            {itemsList.map((item,index)=>{
-              return <TodoItem
-              key = {`${item}${index}`}
-              taskName={item.taskName}
-              isBeingEdited={item.isBeingEdited}
-              handleDelete={()=>handleDelete(item.id)}
-              handleEdit={()=>handleEdit(index,item.id)}
-              handleEditChange={handleEditChange}
-              handleSaveEditedTodo={handleSaveEditedTodo}
-              itemBeingEdited={itemBeingEdited}/>
-            })}
+            <div className="todo-list">
+                {itemsList && <h3>Todo List</h3>}
+                {itemsList.map((item,index)=>{
+                  return <TodoItem
+                  key = {`${item}${index}`}
+                  taskName={item.taskName}
+                  isBeingEdited={item.isBeingEdited}
+                  handleDelete={()=>handleDelete(item.id)}
+                  handleEdit={()=>handleEdit(index,item.id)}
+                  handleEditChange={handleEditChange}
+                  handleSaveEditedTodo={handleSaveEditedTodo}
+                  itemBeingEdited={itemBeingEdited}/>
+                })}
+            </div>
+            
 
       </div>
     );

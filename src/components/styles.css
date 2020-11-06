@@ -1,4 +1,116 @@
-.App {
-  font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body{
+  font-family: 'Roboto', sans-serif;
   text-align: center;
+  background-color: silver;
+  color:#334b7e;
 }
+
+h1{
+  margin-bottom:20vh;
+}
+
+h3{
+  border: 1px solid #334b7e;
+  border-radius: 6px;
+  margin: 3em;
+  padding: 10px;
+  background-color: #C7D3D4FF;
+  color: #603F83FF;
+
+}
+input{
+  margin-Left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  padding:8px 5px 5px 5px;
+  font-size:16px;
+  color:#334b7e;
+  font-family: 'Roboto', sans-serif;
+}
+
+input:focus{ 
+  border:none;	
+  outline:none;
+  border-bottom:1px solid #ff2600;	
+ }
+
+ .todo-list{
+  margin-top:30px;
+  margin-bottom: 30px;
+ }
+
+ .taskData{
+   display: flex;
+   align-items: flex-start;
+   width:40%;
+ }
+ .taskName {
+     font-size: 20px;
+     font-weight: 500;
+ }
+
+button{
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  background: #76528BFF;
+  color: #CBCE91FF;
+  font-weight: 100;
+  padding: 15px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  cursor:pointer;
+}
+button:hover{
+  color: #404040;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  background: whitesmoke;
+  box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.3s ease 0
+}
+
+.delete:hover{
+  background-color: red;
+  color: antiquewhite;
+}
+
+.saveTask:hover{
+  color: #334b7e;
+}
+
+.addTask:hover{
+  color: rgb(31, 112, 31);
+}
+
+.todo-item{
+  margin: 2px 30px 0px 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 10px;
+  border-radius: 6px;
+  background-image:radial-gradient(circle, #A2A2A1FF 0%, #C7D3D4FF 100%);
+}
+li{
+  display: inline;
+  list-style: none;
+  text-transform: capitalize;
+  color: #603F83FF;
+}
+
+.util-buttons{
+  display: inline;
+  width: 40%;
+}
+

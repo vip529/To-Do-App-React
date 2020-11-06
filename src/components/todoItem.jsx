@@ -13,20 +13,23 @@ const TodoItem = (props) => {
          itemBeingEdited
          } = props;
     return (
-        <>
-          <li className="list">
-              {!isBeingEdited ? 
-              (taskName) 
-              :
-              <EditTaskBox
-                  itemBeingEdited={itemBeingEdited}
-                 handleEditChange={handleEditChange}
-                 handleSaveEditedTodo={handleSaveEditedTodo}
-              />
-            }
-          </li>
+        <div className="todo-item">
+          <div className="taskData">
+              <li className="list">
+                  {!isBeingEdited ? 
+                  <div className="taskName">{taskName}</div> 
+                  :
+                  <EditTaskBox
+                      itemBeingEdited={itemBeingEdited}
+                    handleEditChange={handleEditChange}
+                    handleSaveEditedTodo={handleSaveEditedTodo}
+                  />
+                }
+              </li>
+          </div>
+          
           {!isBeingEdited?
-          <div>
+          <div className="util-buttons">
                 <button 
                   style={{marginRight:"10px"}} 
                   className="edit" 
@@ -37,13 +40,13 @@ const TodoItem = (props) => {
                   style={{marginRight:"10px"}} 
                   className="delete" 
                   onClick={handleDelete}>
-                    delete
+                    Delete
                 </button>
           </div>
         : null
         }
           
-        </>
+        </div>
     )
 }
 

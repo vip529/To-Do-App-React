@@ -13,8 +13,9 @@ const  TodoInput  = (props)=> {
             <button 
               type="submit" 
               id="btn" 
+              className="addTask"
               onClick={addTodoItem}>
-            Add
+            Add Task
           </button>
       </>
     );

@@ -14,8 +14,7 @@ const EditTaskBox = (props) => {
               value={itemBeingEdited}
               onChange={handleEditChange}
             />
-            <button 
-              type="submit" 
+            <button  
               className="saveTask" 
               disabled = {itemBeingEdited === ""}
               onClick={handleSaveEditedTodo}
